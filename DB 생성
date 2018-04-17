@@ -27,4 +27,14 @@ id(email), start_day, end_day
 movie 영화
 num, title(kor), title(eng), year, country, age (0/12/15/19), genre, time, director, actor, story, video
 
-
+create table member(
+id varchar(50),
+pass varchar(30)  not null,
+name varchar(20) not null,
+id_num1 int not null,
+id_num2 int not null,
+pay int default 0,
+grade char(10) default '준회원',
+reg_date date,
+constraint mb_name_uk unique(id),
+constraint mb_id_pk primary key(id));          
