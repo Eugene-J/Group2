@@ -7,10 +7,10 @@ coupon
 id(email)(pk), coupon_num, coupon_name(50%,100%)
  
 taste 취향분석
-id(email), category(ani, thriller_horror, indi, romance_drama, action, sf, comedy), avg_rating, count_rating
+id(email), genre(ani, thriller_horror, indi, romance_drama, action, sf, comedy), avg_rating, count_rating
 
 rating 본 작품(평점)
-id(email), title, genre, rating, review, ref_review, rev_review, seq_review, t_recommend
+id(email), num, title, genre, rating, review, ref_review, rev_review, seq_review, t_recommend
 
 notice
 num_n, title_n, date_n
@@ -19,7 +19,7 @@ vip_cinema_prev
 num, title(kor), title(eng), year, country, age, genre, time, director, actor, story, video
 
 vip_reservation 
-id(email), start_day, end_day, seat_num, date, time
+id(email), seat_num, date, time, num
 
 payment 결제
 id(email), start_day, end_day
