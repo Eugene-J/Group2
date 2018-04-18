@@ -1,0 +1,80 @@
+@CHARSET "UTF-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+.clear {
+	clear: both;
+}
+div.m_cover {
+	height: 918px;
+	background-image: url("../images/m_cover.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.5;
+}
+
+div.logo img {
+	width: 180px;
+	height: 40px;
+	position: absolute;
+	top: 2%;
+	left: 2%;
+}
+div.nav_r {
+	background-color: #50d4aa;
+	width: 100px;
+	height: 40px;
+	float: right;
+	position: absolute;
+	top: 2%;
+	right: 2%;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 40px;
+}
+div.nav_r a {
+	text-decoration: none;
+	color: #000;
+	letter-spacing: 0.2px;
+}
+.div_01 {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.div_02 {
+	padding: 5px;
+	margin-bottom: 20px;
+}
+.div_02 span, .div_02 a, p {
+	padding: 5px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+.find_pass {
+	margin-left: 125px;
+	text-decoration: none;
+	color: #000;
+	font-size: 12px;
+}
+
+form input {
+	width: 260px;
+	height: 40px;
+	margin-bottom: 10px;
+}
+
+p {
+	padding: 5px;
+	margin-bottom: 10px;
+	font-size: 12px;
+	letter-spacing: 0.2px;
+	width: 270px;
+}
+
+#submit {
+	background-color: #50d4aa;
+	border-radius: 40px;
+}
