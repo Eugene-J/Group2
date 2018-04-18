@@ -4,17 +4,52 @@
 	padding: 0;
 }
 
+.clear {
+	clear: both;
+}
+
 header, article, footer {
 	border: 1px solid red;
 	height: 300px;
 }
 
 div.f_logo {
-	border: 1px solid red;
+	width: 130px;
+	height: 50px;
+	margin: 30px 10px 30px 20px;
 }
 
 div.use {
-	border: 1px solid red;
+	width: 240px;
+	height: 30px;
+	margin: 10px 20px;
+	padding: 5px 5px;
+	float: left;
+}
+
+div.sns {
+	width: 240px;
+	float: right;
+	position: absolute;
+	bottom: 25%;
+	right: 5%;
+	padding: 5px;
+}
+
+div.sns img {
+	margin-right: 10px;
+}
+
+div.use a {
+	text-decoration: none;
+	color: #000;
+}
+
+div.explain {
+/* 	border: 1px solid red; */
+	margin: 10px 20px;
+	padding: 5px 5px;
+	width: 560px;
 }
 
 
