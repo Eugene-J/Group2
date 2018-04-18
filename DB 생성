@@ -38,3 +38,34 @@ grade char(10) default '준회원',
 reg_date date,
 constraint mb_name_uk unique(id),
 constraint mb_id_pk primary key(id));          
+
+
+create table vip_cinema_prev(
+e_num int,
+kor_title varchar2(60) not null,
+eng_title varchar2(60) not null,
+year int not null,
+country varchar2(10) check(country in('한국','외국')),
+age int not null,
+genre varchar2(30) not null,
+time int not null,
+director varchar2(40) not null,
+actor varchar2(100) not null,
+stroy varchar2(3000) not null,
+video varchar2(50) not null,
+primary key(num));
+
+create table movie(
+num int,
+kor_title varchar2(60) not null,
+eng_title varchar2(60) not null,
+year int not null,
+country varchar2(10) check(country in('한국','외국')),
+age int not null
+,genre varchar2(30) not null,
+time int not null,
+director varchar2(40) not null,
+actor varchar2(100) not null,
+stroy varchar2(3000) not null,
+video varchar2(50) not null,
+primary key(num));
