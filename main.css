@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header, article, footer {
+	border: 1px solid red;
+	height: 300px;
+}
+
+div.f_logo {
+	border: 1px solid red;
+}
+
+div.use {
+	border: 1px solid red;
+}
+
+
+
