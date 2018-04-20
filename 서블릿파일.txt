@@ -1,0 +1,38 @@
+<회원관련>
+서블릿 이름 : MemberFrontController
+서블릿 클래스 : net.member.action.MemberFrontController
+url 패턴 : *.me
+
+<고객센터 관련>
+서블릿 이름 : CustomerFrontController
+서블릿 클래스 : net.customer.action.CustomerFrontController
+url 패턴 : *.cu
+
+<스타트 관련>
+서블릿 이름 : StartFrontController
+서블릿 클래스 : net.start.action.StartFrontController
+url 패턴 : *.st
+
+<메인 관련>
+서블릿 이름 : MainFrontController
+서블릿 클래스 : net.main.action.MainFrontController
+url 패턴 : *.ma
+
+<카테고리 관련>
+서블릿 이름 : CategoryFrontController
+서블릿 클래스 : net.category.action.CategoryFrontController
+url 패턴 : *.ca
+
+<취향 관련>
+서블릿 이름 : TasteFrontController
+서블릿 클래스 : net.taste.action.TasteFrontController
+url 패턴 : *.ta
+
+<즐겨찾기 관련>
+서블릿 이름 : FavoriteFrontController
+서블릿 클래스 : net.favorite.action.FavoriteFrontController
+url 패턴 : *.fa
+
+
+
+
