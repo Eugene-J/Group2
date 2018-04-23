@@ -1,0 +1,89 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<link href="../css/main.css" rel="stylesheet" type="text/css">
+<link href="../css/vip.css" rel="stylesheet" type="text/css">
+
+<script src="../js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('label').click(function(){
+			$(this).css('background-color','#FF0006');
+			return false;
+		});
+	});
+
+</script>
+</head>
+<body>
+
+
+<!-- 헤더 영역 -->
+<header>
+<%-- <jsp:include page="../inc/header.jsp"/> --%>
+</header>
+<!-- 헤더 영역 -->
+
+
+<!-- 아티클 영역 -->
+<article>
+
+<span id="seet">좌석을 선택 해 주세요.</span>
+
+<div class="wrap">
+
+<div id="screen">
+	<div id="screen_2">
+		<span>SCREEN</span>
+	</div>
+	<form action="#" method="get">
+		<label for="a">1<input type="radio" id="a" name="seat"></label>
+		<label for="b">2<input type="radio" id="b" name="seat"></label>
+		<label for="c">3<input type="radio" id="c" name="seat"></label>
+		<label for="d">4<input type="radio" id="d" name="seat"></label>
+		<label for="e">5<input type="radio" id="e" name="seat"></label><br>
+		<label for="f">6<input type="radio" id="f" name="seat"></label>
+		<label for="g">7<input type="radio" id="g" name="seat"></label>
+		<label for="h">8<input type="radio" id="h" name="seat"></label>
+		<label for="i">9<input type="radio" id="i" name="seat"></label>
+		<label for="j">10<input type="radio" id="j" name="seat"></label>
+		<input type="submit" value="좌석 선택" class="submit">
+	</form>
+</div>
+
+<div id="content">
+<table border="1">
+	<tr>
+		<th>Title</th>
+		<td>영화제목</td>
+	</tr>
+	<tr>
+		<th>Date</th>
+		<td>시사회 날짜</td>
+	</tr>
+	<tr>
+		<th>Time</th>
+		<td>상영시간</td>
+	</tr>
+	<tr>
+		<th>좌석</th>
+		<td>0번</td>
+	</tr>
+</table>
+</div>
+
+<div class="clear"></div>
+</div>
+</article>
+<!-- 아티클 영역 -->
+
+<!-- 푸터 영역 -->
+<jsp:include page="../inc/footer.jsp"/>
+<!-- 푸터 영역 -->
+
+</body>
+</html>
