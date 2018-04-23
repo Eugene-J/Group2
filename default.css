@@ -1,298 +1,285 @@
-@charset "UTF-8";
+@CHARSET "UTF-8";
 
-body {
-	background-color: #ffffff;
-	margin: 0px;
-	padding: 0px;
+* {
+	margin: 0;
+	padding: 0;
 }
 
-#wrap{/*border:1px solid green;*/
-	width: 2000px; 
-	height: 5000px;
-	margin: 0 auto;
-	box-sizing: border-box;
+.clear{clear:both;}
+
+article, footer {
+	border: 1px solid red;
+	height: 300px;
 }
 
-.clear{clear: both;}
 
 
 
 
-
-
-/*--header--*/
-header{/* border:1px solid red; */
-	height: 100px;
+/*---header---*/
+header{/* border:1px solid blue; */
+	height: 50px;
 	margin: 0px;
 	padding: 0px;
+	box-sizing:boarder-box;
 	/*float:left;*/
 	}
 
-.title{
-	position:relative;
-	top:-6px;
-	left:7px;
-}	
-#title{
-	font-family: serif;
-	font-weight: bold; 
-	font-size: 3em;
-	margin-bottom:5px;
-	position:relative;
-	top:30px; left:20px;
-}
-
-#title a{
-	text-decoration: none;
-}
-
-#title a:link, #title a:visited{
-	color:black;
-}
-
-#subTitle{
-	width:300px;
-	font-family: serif;
-	font-size:0.3em;
-	background-color:#bdf4df;
-	position:relative;
-	top:30px;
+.title_logo{
+	position:absolute;
+	top:10px;
 	left:10px;
-	
+}	
+
+
+/*이용권구매*/
+.pay{
+	background-color: #ffffff;
+    color: #333;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    position: absolute;
+    right: 10px; top:5px;
 }
 
-	/*login&join*/
-	#login{
-		float: right; 
-		position:relative;
-		top:-60px;
-		right:20px;
-		font-family: Arial,Helvetica,sans-serif;
-		font-size: 15px;
-		font-weight:bold;
-		word-spacing: 5px;
-		text-transform: uppercase;
-		padding: 10px 10px 25px 500px;
-		box-sizing:boarder-box;
-		}
+.pay>a{
+	text-decoration: none;
+	font-weight: bold;
+}	
 
-	#login a{
-		text-decoration: none; 
-		color: #333;}
-	
-	#login a:hover{
-		color: #000000;
-		background-color:#bdf4df;
-		}
+.pay>a:LINK, .pay>a:VISITED{
+	color:#333;
+}
 
-	
-nav#top_menu{/*border:1px solid blue;*/
-	position:relative;
-	top:-90px;
-	right:-100px;
-	width: auto; 
+.pay a:HOVER{
+	color:#ff8000;
+}
+
+
+/*유저정보*/
+.dropbtn1 {
+    background-color: #ffffff;
+    color: #333;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    font-weight: bold;
+}
+
+.myinfo {
+    position: absolute;
+    right:150px; top:10px;
+    display: inline-block;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content1 a {
+    color: #333;
+    font-family:sans-serif;
+	text-align:center;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content1 a:hover {background-color: #ddd}
+
+.myinfo:hover .dropdown-content1 {
+    display: block;
+}
+
+.myinfo:hover .dropbtn1 {
+    color: #ff8000;
+}
+
+
+
+
+/*메인Navigation*/
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  /* font-family: Arial; */
+/*   position: relative;
+  top:80px; */
+  margin-top: 80px;
+
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  height: 22px;
+  text-transform: uppercase;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px; 
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #ff8000;
+  color: #333;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none; 
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1; 
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #333;
+  font-family:sans-serif;
+  text-align:center;
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.vip{
+	height: 49px;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.search-container {
+  float: right;
+}
+
+.navbar input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.search-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  height: 32px;
+}
+
+.navbar .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar .search-container {
+    float: none;
+  }
+  .navbar a, .navbar input[type=text], .navbar .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .navbar input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+
+
+
+
+
+/*---footer---*/
+
+
+div.f_logo {
+	width: 130px;
 	height: 50px;
-	margin: 50px auto;
-	float: right;
-	box-sizing: border-box;
-	}
-	
-nav#top_menu ul{/*border:1px solid red;*/
-	position:relative;
-	top:-20px;
-	left:auto;
-	right:auto;
-	height:50px;
-	width:1000px;
-	list-style:none;
-	font-family: verdana,Geneva,sans-serif;
-	font-size: 20px;
-	padding-top: 10px;
-	/* font-weight:bold; */
-	color: #333;
-	/*float:right;*/
-	box-sizing: border-box;
-	}
+	margin: 30px 10px 30px 20px;
+}
 
-nav#top_menu li{
+div.use {
+	width: 240px;
+	height: 30px;
+	margin: 10px 20px;
+	padding: 5px 5px;
 	float: left;
-	}
+}
 
-nav#top_menu a{
-	display:block; 
-	height:50px;
-	width:180px;
+div.sns {
+	width: 240px;
+	float: right;
+	position: relative;
+	bottom: 100px;
+	right: 100px;
+	padding: 5px;
+}
+
+div.sns img {
+	margin-right: 10px;
+}
+
+div.use a {
 	text-decoration: none;
-	color: #333;
-	text-align: center;
-	padding:50px auto 10px auto;
-	margin-right: 50px;
-	}
-
-nav#top_menu a:hover{
-	trasition-property:all;
-	font-weight:bold;
-	letter-spacing:3px;
-	transition-duration:2s;
-	}
-	
-	
-nav#top_menu li ul{
-	display:none;  /* 평상시에는 서브메뉴가 안보이게 하기 */
-	position:relative;
-	top:-15px;
-	left:5px;
-	width:180px;
-	padding:0px;
-	height:50px;
-	transition-property:all;
-	transition-duration:0s;
-	}
-	
-nav#top_menu li ul li{
-	font-size:18px;
-	float:none;
-	background-color:#eeeeee;
-	margin-bottom:2px;
-	padding-top:20px;
-	box-sizing: boarder-box;
-}
-	
-nav#top_menu li:HOVER ul {
-	display:block;
-	float: none;	
+	color: #000;
 }
 
-nav#top_menu li ul li:HOVER{
-	background-color:#bdf4df;
-	transition-property:none;
-	
-}	
-	
-	
-	
-	
-	
-	
-/*--footer--*/
-
-#footer{
-	margin:20px auto 0 auto; 
-	width:2000px;
-	height: 300px;
-	background-image: url("../images/wave2.jpg");
-	box-sizing: border-box;
-	
-}
-
-#f_footer{
-	margin:20px auto 0 auto; 
-	width:2000px;
-	height: 300px;
-	background-image: url("../images/palm.jpg");
-	box-sizing: border-box;
-	
-}
-
-#f_title{
-	color:#252525;
-	height:80px; width:200px;
-	font-family:serif;
-	font-size: 3em;
-	font-weight:bold;
-	margin-bottom:5px;
-	position:relative;
-	top:60px; left:-150px;	
-}
-
-#ff_title{
-	color:#ffffff;
-	height:80px; width:200px;
-	font-family:serif;
-	font-size: 3em;
-	font-weight:bold;
-	margin-bottom:5px;
-	position:relative;
-	top:60px; left:-150px;	
-}
-
-#f_subTitle{
-	height:160px; width:400px;
-	padding-top:0.5px;
-	padding-left:4px;
-	font-family: serif;
-	font-size:0.5em;
-	background-color:#bdf4df;
-	box-sizing:border-box;
-	position:relative;
-	top:70px; left:10px;
-}
-
-#f_copy{
-	font-size:1.8em;
-	font-weight:bold;
-	position:relative;
-	font-family:serif;
-	top:150px;
-	left:140px;
-	color:#131313;
-}
-
-#ff_copy{
-	font-size:1.8em;
-	font-weight:bold;
-	position:relative;
-	font-family:serif;
-	top:150px;
-	left:140px;
-	color:#ffffff;
-}
-
-#f_social{
-	position:relative;
-	top:-30px;
-	left:1530px;
-	height:60px;
-	width:500px;
-
-}	
-
-#f_social img{
-	margin-right:40px;
-}
-
-#f_social img:HOVER{
-	background-color: #dd7a42;
-}
-#f_up {
-	display: inline-block;
-	height:100px; width:160px;
-	box-sizing: border-box;
-	position:relative;
-	left:320px;
-	top:80px;
+div.explain {
+/* 	border: 1px solid red; */
+	margin: 10px 20px;
+	padding: 5px 5px;
+	width: 560px;
 }
 
 
-#f_up a{
-	font-family:serif;
-	font-size:2.5em;
-	position:relative;
-	text-decoration: none;
-	display: inline-block;
-	background-color: black;
-	color:white;
-}
-
-#f_up a:LINK, #up a:visited {
-	color:#ffffff;
-}
-
-#f_up a:HOVER{
-	color:white;
-	background-color:#583e91;
-}
-
-
-	
-	
