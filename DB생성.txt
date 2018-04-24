@@ -5,7 +5,7 @@ name varchar(20) not null,
 id_num1 int not null,
 id_num2 int not null,
 pay int default 0,
-grade char(10) default 'ÁØÈ¸¿ø',
+grade char(10) default 'ì¤€íšŒì›',
 reg_date date,
 constraint mb_name_uk unique(id),
 constraint mb_id_pk primary key(id)
@@ -13,11 +13,11 @@ constraint mb_id_pk primary key(id)
 
 
 create table vip_cinema_prev(
-e_num int,
+p_num int,
 kor_title varchar(60) not null,
 eng_title varchar(60) not null,
 year int not null,
-country varchar(10) check(country in('ÇÑ±¹','¿Ü±¹')),
+country varchar(10) check(country in('í•œêµ­','ì™¸êµ­')),
 age int not null,
 genre varchar(30) not null,
 time int not null,
@@ -33,7 +33,7 @@ num int,
 kor_title varchar(60) not null,
 eng_title varchar(60) not null,
 year int not null,
-country varchar(10) check(country in('ÇÑ±¹','¿Ü±¹')),
+country varchar(10) check(country in('í•œêµ­','ì™¸êµ­')),
 age int not null,
 genre varchar(30) not null,
 time int not null,
@@ -54,7 +54,7 @@ on delete cascade
 on update cascade
 )
 
-´ñ±Û
+ëŒ“ê¸€
 create table review(
 num int,
 id varchar(50),
@@ -67,14 +67,14 @@ on delete cascade
 on update cascade
 )
 
-vip¿¹¾à
+vipì˜ˆì•½
 create table vip_reservation(
 id varchar(50),
 seat_num int,
 constraint vr_id_fk foreign key(id) references member(id)
 )
 
-°áÁ¦
+ê²°ì œ
 create table payment(
 num int auto_increment,
 id varchar(50),
@@ -86,7 +86,7 @@ on delete cascade
 on update cascade
 )
 
-»ç¿ëÀÚ°¡ ¿µÈ­º°·Î ³²±â´Â º°Á¡³»¿ª
+ì‚¬ìš©ìê°€ ì˜í™”ë³„ë¡œ ë‚¨ê¸°ëŠ” ë³„ì ë‚´ì—­
 create table rating(
 num int auto_increment,
 id varchar(50),
@@ -99,7 +99,7 @@ on delete cascade
 on update cascade
 )
 
-Áßº¹½Å°í
+ì¤‘ë³µì‹ ê³ 
 create table report_chk(
 id varchar(50),
 num int,
@@ -110,7 +110,7 @@ on delete cascade
 on update cascade
 )
 
-ÃëÇâºĞ¼®
+ì·¨í–¥ë¶„ì„
 create table taste(
 id varchar(50),
 genre varchar(30),
@@ -122,7 +122,7 @@ on delete cascade
 on update cascade
 )
 
-Áßº¹ÁÁ¾Æ¿ä
+ì¤‘ë³µì¢‹ì•„ìš”
 create table rec_chk(
 id varchar(50),
 num int,
@@ -134,7 +134,7 @@ on delete cascade
 on update cascade
 )
 
-°øÁö»çÇ×
+ê³µì§€ì‚¬í•­
 create table notice(
 num_n int auto_increment,
 subject_n varchar(200) not null,
@@ -145,7 +145,7 @@ date_n date,
 constraint no_num_pk primary key(num_n)
 )
 
-Áñ°ÜÃ£±â
+ì¦ê²¨ì°¾ê¸°
 create table favorite(
 id varchar(50),
 num int,
