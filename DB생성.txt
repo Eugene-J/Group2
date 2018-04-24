@@ -1,0 +1,168 @@
+create table member(
+id varchar(50),
+pass varchar(30)  not null,
+name varchar(20) not null,
+id_num1 int not null,
+id_num2 int not null,
+pay int default 0,
+grade char(10) default '준회원',
+reg_date date,
+constraint mb_name_uk unique(id),
+constraint mb_id_pk primary key(id)
+);          
+
+
+create table vip_cinema_prev(
+e_num int,
+kor_title varchar(60) not null,
+eng_title varchar(60) not null,
+year int not null,
+country varchar(10) check(country in('한국','외국')),
+age int not null,
+genre varchar(30) not null,
+time int not null,
+director varchar(40) not null,
+actor varchar(100) not null,
+stroy varchar(3000) not null,
+video varchar(50) not null,
+constraint vip_num_pk primary key(e_num)
+);
+
+create table movie(
+num int,
+kor_title varchar(60) not null,
+eng_title varchar(60) not null,
+year int not null,
+country varchar(10) check(country in('한국','외국')),
+age int not null,
+genre varchar(30) not null,
+time int not null,
+director varchar(40) not null,
+actor varchar(100) not null,
+stroy varchar(3000) not null,
+video varchar(50) not null,
+constraint num_mo_pk primary key(num)
+);
+
+create table coupon(
+id varchar(50),
+coupon_num int auto_increment,
+coupon_name int not null,
+constraint cu_cn_pk primary key(coupon_num),
+constraint cu_id_fk foreign key(id) references member(id)
+on delete cascade
+on update cascade
+)
+
+댓글
+create table review(
+num int,
+id varchar(50),
+p_num int,
+recommand int default 0,
+constraint rv_nu_pk primary key(num),
+constraint rv_id_fk foreign key(id) references member(id),
+constraint rv_pu_fk foreign key(p_num) references movie(num)
+on delete cascade
+on update cascade
+)
+
+vip예약
+create table vip_reservation(
+id varchar(50),
+seat_num int,
+constraint vr_id_fk foreign key(id) references member(id)
+)
+
+결제
+create table payment(
+num int auto_increment,
+id varchar(50),
+start_day date not null,
+end_day date not null,
+constraint pay_num_kf primary key(num),
+constraint pay_id_fk foreign key(id) references member(id)
+on delete cascade
+on update cascade
+)
+
+사용자가 영화별로 남기는 별점내역
+create table rating(
+num int auto_increment,
+id varchar(50),
+rating int not null,
+p_num int,
+constraint rt_num_kf primary key(num),
+constraint rt_id_fk foreign key(id) references member(id),
+constraint rt_pu_fk foreign key(p_num) references movie(num)
+on delete cascade
+on update cascade
+)
+
+중복신고
+create table report_chk(
+id varchar(50),
+num int,
+constraint rp_in_pk primary key(id,num),
+constraint rp_id_fk foreign key(id) references member(id),
+constraint rp_pu_fk foreign key(num) references review(num)
+on delete cascade
+on update cascade
+)
+
+취향분석
+create table taste(
+id varchar(50),
+genre varchar(30),
+avg_rating int default 0,
+count_rating int default 0,
+constraint ta_id_pk primary key(id,genre),
+constraint ta_id_fk foreign key(id) references member(id)
+on delete cascade
+on update cascade
+)
+
+중복좋아요
+create table rec_chk(
+id varchar(50),
+num int,
+chk int default 0,
+constraint rc_in_pk primary key(id,num),
+constraint rc_id_fk foreign key(id) references member(id),
+constraint rc_pu_fk foreign key(num) references review(num)
+on delete cascade
+on update cascade
+)
+
+공지사항
+create table notice(
+num_n int auto_increment,
+subject_n varchar(200) not null,
+content_n varchar(5000) not null,
+image_n varchar(500),
+file_n varchar(200),
+date_n date,
+constraint no_num_pk primary key(num_n)
+)
+
+즐겨찾기
+create table favorite(
+id varchar(50),
+num int,
+constraint fa_in_pk primary key(id,num),
+constraint fa_id_fk foreign key(id) references member(id),
+constraint fa_pu_fk foreign key(num) references movie(num)
+on delete cascade
+on update cascade
+)
+
+create table alarm(
+id varchar(50),
+num int auto_increment,
+alarm_name int not null,
+end_day date,
+constraint al_id_pk primary key(num),
+constraint al_id_fk foreign key(id) references member(id)
+on delete cascade
+on update cascade
+)
