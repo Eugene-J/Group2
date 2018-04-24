@@ -1,0 +1,168 @@
+create table member(
+m_id varchar(50),
+m_pass varchar(30)  not null,
+m_name varchar(20) not null,
+m_id_num1 int not null,
+m_id_num2 int not null,
+m_pay int default 0,
+m_grade char(10) default '준회원',
+m_reg_date date,
+constraint mb_name_uk unique(m_name),
+constraint mb_id_pk primary key(m_id)
+);          
+
+
+create table vip_cinema_prev(
+v_num int,
+v_kor_title varchar(60) not null,
+v_eng_title varchar(60) not null,
+v_year int not null,
+v_country varchar(10) check(country in('한국','외국')),
+v_age int not null,
+v_genre varchar(30) not null,
+v_time int not null,
+v_director varchar(40) not null,
+v_actor varchar(100) not null,
+v_stroy varchar(3000) not null,
+v_video varchar(50) not null,
+constraint vip_num_pk primary key(v_num)
+);
+
+create table movie(
+mv_num int,
+mv_kor_title varchar(60) not null,
+mv_eng_title varchar(60) not null,
+mv_year int not null,
+mv_country varchar(10) check(country in('한국','외국')),
+mv_age int not null,
+mv_genre varchar(30) not null,
+mv_time int not null,
+mv_director varchar(40) not null,
+mv_actor varchar(100) not null,
+mv_stroy varchar(3000) not null,
+mv_video varchar(50) not null,
+constraint num_mo_pk primary key(mv_num)
+);
+
+create table coupon(
+c_id varchar(50),
+c_num int auto_increment,
+c_name int not null,
+constraint cu_cn_pk primary key(c_num),
+constraint cu_id_fk foreign key(c_id) references member(m_id)
+on delete cascade
+on update cascade
+)
+
+댓글
+create table review(
+r_num int,
+r_id varchar(50),
+r_p_num int,
+r_recommand int default 0,
+constraint rv_nu_pk primary key(r_num),
+constraint rv_id_fk foreign key(r_id) references member(m_id),
+constraint rv_pu_fk foreign key(r_p_num) references movi(mv_num)
+on delete cascade
+on update cascade
+)
+
+vip예약
+create table vip_reservation(
+vr_id varchar(50),
+vr_seat_num int,
+constraint vr_id_fk foreign key(id) references member(vr_id)
+)
+
+결제
+create table payment(
+p_num int auto_increment,
+p_id varchar(50),
+p_start_day date not null,
+p_end_day date not null,
+constraint pay_num_kf primary key(p_num),
+constraint pay_id_fk foreign key(p_id) references member(m_id)
+on delete cascade
+on update cascade
+)
+
+사용자가 영화별로 남기는 별점내역
+create table rating(
+ra_num int auto_increment,
+ra_id varchar(50),
+ra_rating int not null,
+ra_p_num int,
+constraint rt_num_kf primary key(ra_num),
+constraint rt_id_fk foreign key(ra_id) references member(m_id),
+constraint rt_pu_fk foreign key(ra_p_num) references movie(mv_num)
+on delete cascade
+on update cascade
+)
+
+중복신고
+create table report_chk(
+rp_id varchar(50),
+rp_num int,
+constraint rp_in_pk primary key(rp_id,rp_num),
+constraint rp_id_fk foreign key(rp_id) references member(m_id),
+constraint rp_pu_fk foreign key(rp_num) references review(r_num)
+on delete cascade
+on update cascade
+)
+
+취향분석
+create table taste(
+t_id varchar(50),
+t_genre varchar(30),
+t_avg_rating int default 0,
+t_count_rating int default 0,
+constraint ta_id_pk primary key(t_id,t_genre),
+constraint ta_id_fk foreign key(t_id) references member(m_id)
+on delete cascade
+on update cascade
+)
+
+중복좋아요
+create table rec_chk(
+re_id varchar(50),
+re_num int,
+chk int default 0,
+constraint rc_in_pk primary key(re_id,re_num),
+constraint rc_id_fk foreign key(re_id) references member(m_id),
+constraint rc_pu_fk foreign key(re_num) references review(r_num)
+on delete cascade
+on update cascade
+)
+
+공지사항
+create table notice(
+n_num int auto_increment,
+n_subject varchar(200) not null,
+n_content varchar(5000) not null,
+n_image varchar(500),
+n_file varchar(200),
+n_date date,
+constraint no_num_pk primary key(n_num)
+)
+
+즐겨찾기
+create table favorite(
+f_id varchar(50),
+f_num int,
+constraint fa_in_pk primary key(f_id,f_num),
+constraint fa_id_fk foreign key(f_id) references member(m_id),
+constraint fa_pu_fk foreign key(f_num) references movie(mv_num)
+on delete cascade
+on update cascade
+)
+
+create table alarm(
+a_id varchar(50),
+a_num int auto_increment,
+a_alarm_name int not null,
+a_end_day date,
+constraint al_id_pk primary key(a_num),
+constraint al_id_fk foreign key(a_id) references member(m_id)
+on delete cascade
+on update cascade
+)
