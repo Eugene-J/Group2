@@ -13,7 +13,7 @@ constraint mb_id_pk primary key(id)
 
 
 create table vip_cinema_prev(
-p_num int,
+v_num int,
 kor_title varchar(60) not null,
 eng_title varchar(60) not null,
 year int not null,
@@ -25,7 +25,7 @@ director varchar(40) not null,
 actor varchar(100) not null,
 stroy varchar(3000) not null,
 video varchar(50) not null,
-constraint vip_num_pk primary key(e_num)
+constraint vip_num_pk primary key(v_num)
 );
 
 create table movie(
