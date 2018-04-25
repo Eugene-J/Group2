@@ -8,30 +8,42 @@
 
 .mypage_ {
 	height: 600px;
+	padding:0;
+	
 /* 	position: relative; */
 }
 
-.mypage_profile {
-	margin: 80px 80px 5px 150px;
+.mypage_profile {border:1px solid #a0a0a0;
+	border-radius:30px;
+	margin: 80px auto 5px auto;
 	padding: 50px;
 	position: relative;
-	left: 30px;
-	top: 30px;
+	left: 0px;
+	top: 100px; 
+	width:300px;
+	height: 180px;
+	box-shadow:5px 5px #a0a0a0;
 }
 
-.mypage_profile p {
+.mypage_profile h2 {
 	margin-left: 500px;
 	padding: 20px;
-	font-size: 18px;
+	font-size: 1.5em;
 	color:#333;
 	font-weight: bold;
-	display: block;
+	position: relative;
+	right: 520px;
+	top: -40px; 
+	text-transform: uppercase;
+	font-family: sans-serif;
 }
 
-.mypage_info {
-	margin-top: 50px;
-	margin-left: 500px;
-	width: 600px;
+.mypage_info {/* border:1px solid blue; */
+	margin:50px auto 1200px auto;
+	width: 300px;
+	position: relative;
+	left: 0px;
+	top: -100px; 
 }
 
 .mypage_info td {
@@ -41,29 +53,48 @@
 	letter-spacing: 0.5px;
 }
 
-.mypage_btn {
-	margin: 50px;
-	padding: 50px;
-	position: relative;
+.mypage_btn {/* border:1px solid red;  */
+	/* margin: 50px; */
+	/* padding: 50px; */
+	width:400px;
+	height:50px;
+	position:relative;
+	left:500px;
+	top:40px;
+	box-sizing:border-box;	
+	margin:5px auto;
+}
+
+.mypage_inner{
+	/* border:1px solid green; */
+	padding:0px;
+	/* 	float: left;  */
+	position:relative;
+	top:70px;
+	right:410px;
+	margin:5px auto;
 }
 
 .mypage_btn_inner, .mypage_btn_inner2 {
+	/* border:1px solid blue; */
 	background-color: #50d4aa;
 	width: 100px;
 	height: 40px;
 	text-align: center;
-	line-height: 40px;
-	border-radius: 40px;
-	float: left;
+	line-height:40px;
+	border-radius:40px;
+	position: relative;
+	display: inline-block;
+	margin-right: 30px;
 }
 
-.mypage_btn_inner {
+/* .mypage_btn_inner {
 	margin-left: 610px;
 }
 
 .mypage_btn_inner2 {
 	margin-left: 150px;
-}
+} */
 
 .mypage_btn_inner a, .mypage_btn_inner2 a {
 	text-decoration: none;
@@ -123,9 +154,4 @@
 .update_text2 {
 	margin-left: 20px;
 }
-
-
-
-
-
 
