@@ -18,7 +18,7 @@
 
 <div class="mypage_">
 	<div class="mypage_profile">
-		<p>프로필</p>
+		<h2>profile</h2>
 		
 		<table class="mypage_info">
 			<tr>
