@@ -5,13 +5,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+<%
+request.setCharacterEncoding("UTF-8");
+%>
 <title>와츄</title>
 
  	<!--  border/writeForm.jsp -->
 <h1>영화DB 입력폼</h1>
 </head>
 <body>
-<form action="./BoardWriteAction.bo" method="post">
+<form action="" method="post">
 <table border="0">
 <tr><td>제목(한글)</td>
 	<td><input type="text" name="kor_title"></td></tr>
@@ -34,14 +37,14 @@
 <tr><td>시놉시스</td>
 	<td><textarea cols="40" rows="10" name="story"></textarea></tr>
 
-<tr><td>포스터</td>
+<tr><td>예고편 링크주소</td>
+	<td><input type="text" name="video"></td></tr>
+<!-- <tr><td>포스터</td>
 	<td><input type="file" name="poster"></td></tr>
 <tr><td>스틸컷1</td>
 	<td><input type="file" name="steelcut"></td></tr>
 <tr><td>스틸컷2</td>
-	<td><input type="file" name="steelcut2"></td></tr>
-<tr><td>예고편 링크주소</td>
-	<td><input type="text" name="trailer"></td></tr>
+	<td><input type="file" name="steelcut2"></td></tr> -->
 
 <tr><td colspan="2">
 			<input type="submit" value="글쓰기">
