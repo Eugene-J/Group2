@@ -1,0 +1,131 @@
+@CHARSET "UTF-8";
+
+.clear {
+	clear: both;
+}
+
+/* 마이페이지 */
+
+.mypage_ {
+	height: 600px;
+/* 	position: relative; */
+}
+
+.mypage_profile {
+	margin: 80px 80px 5px 150px;
+	padding: 50px;
+	position: relative;
+	left: 30px;
+	top: 30px;
+}
+
+.mypage_profile p {
+	margin-left: 500px;
+	padding: 20px;
+	font-size: 18px;
+	color:#333;
+	font-weight: bold;
+	display: block;
+}
+
+.mypage_info {
+	margin-top: 50px;
+	margin-left: 500px;
+	width: 600px;
+}
+
+.mypage_info td {
+	padding: 20px;
+	color: #333;
+	font-size: 18px;
+	letter-spacing: 0.5px;
+}
+
+.mypage_btn {
+	margin: 50px;
+	padding: 50px;
+	position: relative;
+}
+
+.mypage_btn_inner, .mypage_btn_inner2 {
+	background-color: #50d4aa;
+	width: 100px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 40px;
+	float: left;
+}
+
+.mypage_btn_inner {
+	margin-left: 610px;
+}
+
+.mypage_btn_inner2 {
+	margin-left: 150px;
+}
+
+.mypage_btn_inner a, .mypage_btn_inner2 a {
+	text-decoration: none;
+	color: #333;
+	letter-spacing: 0.2px;
+}
+
+/* 비밀번호 체크 페이지 */
+
+.mypage_check {
+	margin-top: 80px;
+	margin-left: 520px;
+	width: 260px;
+	height: 40px;
+}
+
+.check_text {
+	background-color: #50d4aa;
+	border-radius: 40px;
+	width: 160px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	margin-left: 570px;
+	margin-top: 80px;
+	font-size: 17px;
+	color: #333;
+	letter-spacing: 2px;
+}
+
+/* 회원정보 수정 페이지 */
+
+.update {
+	margin-top: 30px;
+	margin-left: 520px;
+	width: 260px;
+	height: 40px;
+}
+
+.update_text, .update_text2 {
+	background-color: #50d4aa;
+	border-radius: 40px;
+	width: 160px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	margin-top: 50px;
+	font-size: 17px;
+	color: #333;
+	letter-spacing: 2px;
+}
+
+.update_text {
+	margin-left: 480px;
+}
+
+.update_text2 {
+	margin-left: 20px;
+}
+
+
+
+
+
+
