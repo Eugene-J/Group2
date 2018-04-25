@@ -7,10 +7,10 @@
 
 .clear{clear:both;}
 
-article, footer {
-	border: 1px solid red;
-	height: 300px;
-}
+/* article, footer { */
+/* 	border: 1px solid red; */
+/* 	height: 300px; */
+/* } */
 
 
 
@@ -236,12 +236,17 @@ header{/* border:1px solid blue; */
 }
 
 
-
+/* article { */
+/* 	height: 900px; */
+/* } */
 
 
 
 /*---footer---*/
-
+footer {
+	background-color: #333;
+	height: 350px;
+}
 
 div.f_logo {
 	width: 130px;
@@ -252,9 +257,11 @@ div.f_logo {
 div.use {
 	width: 240px;
 	height: 30px;
-	margin: 10px 20px;
+/* 	margin: 10px 20px; */
+	margin: 20px 20px 0 20px;
 	padding: 5px 5px;
 	float: left;
+	color: white;
 }
 
 div.sns {
@@ -267,19 +274,21 @@ div.sns {
 }
 
 div.sns img {
+	border: 1px solid white;
+	border-radius: 30px;
 	margin-right: 10px;
 }
 
 div.use a {
 	text-decoration: none;
-	color: #000;
+	color: white;
 }
 
 div.explain {
-/* 	border: 1px solid red; */
-	margin: 10px 20px;
+	margin: 0 20px 10px 20px;
 	padding: 5px 5px;
 	width: 560px;
+	color: white;
 }
 
 
