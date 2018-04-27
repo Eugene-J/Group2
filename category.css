@@ -1,0 +1,178 @@
+@CHARSET "UTF-8";
+
+
+/*전체 설정*/
+*{
+	margin:0;
+	padding:0;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+/*아티클 전체 설정*/
+/* article{
+	border:1px solid blue;
+	height: calc(150/5*220px); 
+	width: auto; 
+} */
+
+#categoryTitle{
+	margin-top:50px;
+	margin-left:150px;
+}
+article{/* border:1px solid green; */
+	width:85%; 
+	height: calc(150/5*270px); 
+	margin:50px auto;
+	padding-left:20px;
+	/* box-sizing:border-box; */}
+
+
+
+div.mv {
+    margin: 20px 7px 30px 7px;
+/*     border: 1px solid red;  */
+  	float: left; 
+    width:300px;
+    height:200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.mv img {
+    height:120%;  
+    width:auto;  
+}
+
+/*영화 제목*/
+.mv_title{
+	position: absolute;
+	top:160px; left:10px;
+	font-weight: bold;
+	font-size: 1.2em;
+	color:white;
+	text-shadow: 1px 1px #808080;
+}
+
+/*년도, 등급, 러닝타임, 주연 정보 : 마우스 오버 전에는 보이지 않음*/
+.mv_year, .mv_grade, .mv_time, .mv_synop{
+	display: none;
+}
+
+
+/*영화 스틸컷 마우스 오버 시*/
+.mv:HOVER{
+	transform: scale(1.5);
+	display:inline-block;
+	z-index: 5;
+	overflow: hidden;
+	margin:0 30px 50px 30px; 
+}
+
+.mv:HOVER .mv_title{
+	position:absolute;
+	top:110px; left: 20px;
+}
+
+.mv:HOVER .mv_year{
+	display:block;
+	position: absolute;
+	top:135px; left:25px;	
+	font-weight: bold;
+	font-size: 0.7em;
+	color:white;
+	text-shadow: 1px 1px #808080;
+}
+
+.mv:HOVER .mv_grade{
+	border:1px solid white;
+	padding: 0px 1px 1px 1px;
+	display:block;
+	position: absolute;
+	top:155px; left:25px;	
+	font-weight: bold;
+	font-size: 0.6em;
+	color:white;
+	text-shadow: 1px 1px #808080;
+	box-sizing:border-box;
+}
+
+.mv:HOVER .mv_time{
+	display:block;
+	position: absolute;
+	top:173px; left:25px;	
+	font-weight: bold;
+	font-size: 0.7em;
+	color:white;
+	text-shadow: 1px 1px #808080;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:1870px){
+	article{
+	height: calc(150/4*260px); 
+	}
+}
+
+@media screen and (max-width:1515px){
+	article{
+	height: calc(150/3*250px); 
+	}
+}
+
+@media screen and (max-width:1155px){
+	article{
+	height: calc(150/2*250px); 
+	padding-left: 100px;
+	}
+
+}
+
+@media screen and (max-width:875px){
+	article{
+	height: calc(150/1*310px); 
+	padding-left: 15%;
+	}
+	div.mv { 
+    width:360px;
+    height:260px;
+	}
+}
+
+@media screen and (max-width:599px){
+	article{
+	height: calc(150/1*280px); 
+	padding-left: 15%;
+	}
+	
+	div.mv { 
+    width:360px;
+    height:260px;
+	}
+	
+	#categoryTitle{
+	padding-top:30%;
+	}
+}
+
+@media screen and (max-width:544px){
+	article{
+	height: calc(150/1*310px); 
+	padding-left: 8%;
+	padding-right: 8%;	
+	}
+
+	div.mv { 
+    width:360px;
+    height:260px;
+	}
+	
+	#categoryTitle{
+	padding-top:30%;
+	}
+}
