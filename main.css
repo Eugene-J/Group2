@@ -1,0 +1,201 @@
+@CHARSET "UTF-8";
+
+
+/*전체 설정*/
+*{
+	margin:0;
+	padding:0;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+/*아티클 전체 설정*/
+article{
+	height:2000px;
+	width: auto;
+}
+
+
+/*슬라이더 컨테이너 설정*/
+.container{/* border:1px solid orange; */ 
+	height:280px;
+	/* width:auto; */
+	margin: 80px auto;
+	overflow: hidden; 	
+}
+
+/*슬라이더 제목*/
+.container h2{/* border:1px solid red; */
+	padding-bottom: 20px;
+}
+
+/*슬라이더*/
+.slider{/* border:1px solid blue; */
+	/* overflow: hidden;  */
+	/* 	width:1000px;  */
+	/* height:250px; */
+	position: relative;
+	box-sizing:border-box;
+	padding:0;
+}
+
+/*영화 Box*/
+.mv {
+	/* border:2px solid #008000; */
+/* 	width: 200px;  */
+/* 	height: 120px; */
+	float: left;
+	overflow:hidden;
+	box-sizing:border-box;
+	/* overflow: hidden; */
+	margin-right: 5px;
+	box-shadow:5px 5px #a0a0a0;
+	position: relative;
+}
+.mv>img {
+	position:relative;
+	top:-50px;
+	left: -110px;	
+/* 	height: 100%;
+	width: auto; */
+}
+
+/*영화 제목*/
+.mv_title{
+	position: absolute;
+	top:180px; left:10px;
+	font-weight: bold;
+	font-size: 1.2em;
+	color:white;
+	text-shadow: 1px 1px #808080;
+}
+
+/*년도, 등급, 러닝타임, 주연 정보 : 마우스 오버 전에는 보이지 않음*/
+.mv_year, .mv_grade, .mv_time, .mv_synop{
+	display: none;
+}
+
+/*이전 다음 버튼 디자인*/
+.button{ /* border: 1px solid red;  */
+	background-color: transparent;
+	margin:0;
+	padding:0;
+	width: 60px;
+	height: 60px;
+	display: inline;
+	box-shadow:none;
+	box-sizing:border-box;	
+} 
+.button>img{
+	opacity:0.5;
+}
+
+
+
+
+/**이전 다음 버튼 제어**/
+.prev1{
+	position:absolute;
+	top:330px; left:30px;
+}
+.next1{
+	position:absolute;
+	top:330px; right: 30px;
+}
+
+.prev2{
+	position:absolute;
+	top:680px; left:30px;
+}
+.next2{
+	position:absolute;
+	top:680px; right: 30px;
+}
+
+.prev3{
+	position:absolute;
+	top:1030px; left:30px;
+}
+.next3{
+	position:absolute;
+	top:1030px; right: 30px;
+}
+
+.prev4{
+	position:absolute;
+	top:1380px; left:30px;
+}
+.next4{
+	position:absolute;
+	top:1380px; right: 30px;
+}
+
+.prev5{
+	position:absolute;
+	top:1730px; left:30px;
+}
+.next5{
+	position:absolute;
+	top:1730px; right: 30px;
+}
+
+
+.button img:HOVER {
+	opacity:1;
+	width: 70px;
+	height: 70px;
+}
+/**이전 다음 버튼 제어 끝**/
+
+
+
+/*영화 스틸컷 마우스 오버 시*/
+.mv:HOVER{
+	transform: scale(1.5);
+	width:500px;
+	height: 250px;
+	overflow: visible;
+	display: block;
+	margin:0 250px 0 250px;
+}
+
+.mv:HOVER .mv_title{
+	position:absolute;
+	top:100px; left: -70px;
+}
+
+.mv:HOVER .mv_year{
+	display:block;
+	position: absolute;
+	top:125px; left:-65px;	
+	font-weight: bold;
+	font-size: 0.7em;
+	color:white;
+	text-shadow: 1px 1px #808080;
+}
+
+.mv:HOVER .mv_grade{
+	border:1px solid white;
+	padding: 0px 1px 1px 1px;
+	display:block;
+	position: absolute;
+	top:145px; left:-65px;	
+	font-weight: bold;
+	font-size: 0.6em;
+	color:white;
+	text-shadow: 1px 1px #808080;
+	box-sizing:border-box;
+}
+
+.mv:HOVER .mv_time{
+	display:block;
+	position: absolute;
+	top:162px; left:-65px;	
+	font-weight: bold;
+	font-size: 0.7em;
+	color:white;
+	text-shadow: 1px 1px #808080;
+}
+
+
+
+
