@@ -18,7 +18,10 @@
 </div>
 
 <div class="clear"></div>
+<%="GIthub 연동테스트 ㄴㅁㅇㄴㅁㄻㄴㄹㄴㄻㄴㄻ"
 
+
+%>
 <div class="div_01">
 		<div class="div_02">
 			<span>회원가입</span>
